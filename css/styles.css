@@ -591,11 +591,7 @@ body {
   fill: transparent;
   cursor: pointer;
   transition: background-color var(--hover-transition),
-    border var(--hover-transition);
-}
-
-.contact-form-checkmark {
-  transition: fill var(--hover-transition);
+    border var(--hover-transition), fill var(--hover-transition);
 }
 
 .contact-form-accept-label {
