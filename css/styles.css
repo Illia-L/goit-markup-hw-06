@@ -106,7 +106,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  color: var(--nave-blue);
+  color: var(--color-navy-blue);
 }
 
 .nav-items {
@@ -129,7 +129,7 @@ body {
 }
 
 .logo-studio {
-  color: var(--nave-blue);
+  color: var(--color-navy-blue);
 }
 
 .nav-link {
@@ -634,7 +634,7 @@ body {
 /* #region ROOTER */
 .footer {
   padding: 100px 0;
-  background-color: var(--nave-blue);
+  background-color: var(--color-navy-blue);
 }
 
 .footer .container {
