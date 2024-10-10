@@ -480,98 +480,139 @@
           </ul>
         </div>
 
-        <form action="" class="subscribe">
-          <label class="subscribe-label" for="subscribe-input">Subscribe</label>
+        <div class="subscribe">
+          <p class="subscribe-title" for="subscribe-input">Subscribe</p>
 
-          <div class="wrap-input-btn">
-            <input
-              type="email"
-              name="subscribe_email"
-              id="subscribe-input"
-              class="subscribe-input"
-              placeholder="E-mail"
-            />
+          <form class="subscribe-form">
+            <label class="subscribe-label">
+              <input
+                type="email"
+                name="subscribe_email"
+                id="subscribe-input"
+                class="subscribe-input"
+                placeholder="E-mail"
+              />
+            </label>
+
             <button type="submit" class="subscribe-submit flex-center">
               Subscribe
               <svg class="subscribe-icon-send" width="24" height="20">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
 
     <div class="modal-overlay">
-      <form class="contact-form modal">
+      <div class="modal">
         <button class="contact-form-btn-close flex-center" type="button">
           <svg width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2 class="contact-form-title">
+
+        <p class="contact-form-title">
           Leave your contacts and we will call you back
-        </h2>
-        <label class="contact-form-label">
-          <p class="contact-form-label-text">Name</p>
-          <div class="contact-form-input-group">
-            <svg class="contact-form-input-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-person"></use>
-            </svg>
-            <input class="contact-form-input" type="text" name="name" />
-          </div>
-        </label>
+        </p>
 
-        <label class="contact-form-label">
-          <p class="contact-form-label-text">Phone</p>
-          <div class="contact-form-input-group">
-            <svg class="contact-form-input-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-phone"></use>
-            </svg>
-            <input class="contact-form-input" type="tel" name="phone" />
-          </div>
-        </label>
+        <form class="contact-form">
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="form_contact_name"
+              >Name</label
+            >
 
-        <label class="contact-form-label">
-          <p class="contact-form-label-text">Email</p>
-          <div class="contact-form-input-group">
-            <svg class="contact-form-input-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-envelope"></use>
-            </svg>
-            <input class="contact-form-input" type="email" name="email" />
-          </div>
-        </label>
+            <div class="contact-form-group contact-form-input-group">
+              <input
+                class="contact-form-input"
+                type="text"
+                name="name"
+                id="form_contact_name"
+              />
 
-        <label class="contact-form-label contact-form-comment">
-          <p class="contact-form-label-text">Comment</p>
-          <textarea
-            class="contact-form-input contact-form-input-comment"
-            name="comment"
-            rows="7"
-            placeholder="Text input"
-          ></textarea>
-        </label>
-        <label class="contact-form-label contact-form-label-comment">
-          <input
-            class="contact-form-input contact-form-checkbox"
-            type="checkbox"
-            name="accept"
-          />
-
-          <div class="contact-form-custom-checkbox flex-center">
-            <svg class="contact-form-checkmark" width="10" height="8">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg>
+              <svg class="contact-form-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
 
-          <p class="contact-form-accept-text">
-            I accept the terms and conditions of the
-            <a href="" class="contact-form-terms-link">Privacy Policy</a>
-          </p>
-        </label>
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="form_contact_phone"
+              >Phone</label
+            >
 
-        <button class="contact-form-submit" type="submit">Send</button>
-      </form>
+            <div class="contact-form-input-group">
+              <input
+                class="contact-form-input"
+                type="tel"
+                name="phone"
+                id="form_contact_phone"
+              />
+
+              <svg class="contact-form-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-label" for="form_contact_email"
+              >Email</label
+            >
+
+            <div class="contact-form-input-group">
+              <input
+                class="contact-form-input"
+                type="email"
+                name="email"
+                id="form_contact_email"
+              />
+
+              <svg class="contact-form-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="contact-form-comment-group">
+            <label class="contact-form-label" for="form_contact_comment">
+              Comment
+            </label>
+
+            <textarea
+              class="contact-form-input contact-form-input-comment"
+              name="comment"
+              rows="7"
+              placeholder="Text input"
+              id="form_contact_comment"
+            ></textarea>
+          </div>
+
+          <div class="contact-form-accept-group">
+            <input
+              class="contact-form-checkbox"
+              type="checkbox"
+              name="accept"
+              id="form_contact_accept"
+            />
+
+            <label
+              class="contact-form-label contact-form-accept-label"
+              for="form_contact_accept"
+            >
+              <span class="contact-form-custom-checkbox flex-center">
+                <svg class="contact-form-checkmark" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;
+              <a href="" class="contact-form-terms-link">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="contact-form-submit" type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

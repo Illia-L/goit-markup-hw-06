@@ -473,9 +473,13 @@ body {
   text-align: center;
 }
 
+.contact-form-group {
+  margin-bottom: 8px;
+}
+
 .contact-form-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   line-height: 1.17;
   font-size: 12px;
   letter-spacing: 0.04em;
@@ -483,25 +487,22 @@ body {
     fill var(--hover-transition);
 }
 
-.contact-form-label:focus-within .contact-form-input-group {
-  border-color: var(--color-iris);
-}
-
-.contact-form-label:focus-within .contact-form-input-icon {
-  fill: var(--color-iris);
-}
-
-.contact-form-label-text {
-  margin-bottom: 4px;
-}
-
 .contact-form-input-group {
+  position: relative;
   display: flex;
   gap: 4px;
   border: var(--input-border);
   border-radius: 4px;
-  padding: 7px 8px 7px 16px;
+  padding: 7px 8px 7px 38px;
   transition: border-color var(--hover-transition);
+}
+
+.contact-form-input-group:focus-within {
+  border-color: var(--color-iris);
+}
+
+.contact-form-input-group:focus-within .contact-form-input-icon {
+  fill: var(--color-iris);
 }
 
 .contact-form-input {
@@ -519,11 +520,13 @@ body {
 }
 
 .contact-form-input-icon {
+  position: absolute;
+  left: 16px;
   fill: var(--color-navy-blue);
   transition: fill var(--hover-transition);
 }
 
-.contact-form-comment {
+.contact-form-comment-group {
   margin-bottom: 16px;
 }
 
@@ -532,6 +535,9 @@ body {
   border-radius: 4px;
   padding: 8px 16px 12px 16px;
   resize: none;
+  line-height: 1.17;
+  font-size: 12px;
+  letter-spacing: 0.04em;
   transition: border-color var(--hover-transition);
 }
 
@@ -539,22 +545,20 @@ body {
   border-color: var(--color-iris);
 }
 
-.contact-form-label-comment {
+.contact-form-accept-group {
   margin-bottom: 24px;
-  display: flex;
-  align-items: center;
 }
 
 .contact-form-checkbox {
   display: none;
 }
 
-.contact-form-checkbox:checked + .contact-form-custom-checkbox {
+.contact-form-checkbox:checked + label .contact-form-custom-checkbox {
   background-color: #404bbf;
 }
 
 .contact-form-checkbox:checked
-  + .contact-form-custom-checkbox
+  + label
   .contact-form-checkmark {
   fill: var(--color-cloud);
 }
@@ -575,7 +579,9 @@ body {
   transition: fill var(--hover-transition);
 }
 
-.contact-form-accept-text {
+.contact-form-accept-label {
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -678,13 +684,13 @@ body {
   color: #fff;
 }
 
-.subscribe-label {
+.subscribe-title {
   display: block;
   margin-bottom: 16px;
   font-weight: 500;
 }
 
-.wrap-input-btn {
+.subscribe-form {
   display: flex;
 }
 
