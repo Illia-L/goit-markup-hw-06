@@ -1,5 +1,8 @@
 /* #region RESET */
+a,
+address,
 body,
+button,
 header,
 main,
 footer,
@@ -11,9 +14,7 @@ h3,
 input,
 p,
 ul,
-li,
-a,
-address {
+li {
   margin: 0;
   padding: 0;
 }
@@ -411,15 +412,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--hover-transition);
+  transition: opacity var(--hover-transition),
+    visibility var(--hover-transition);
 }
 
 .modal-overlay.is-opened {
@@ -428,12 +430,18 @@ body {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 408px;
-  padding: 24px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
   background-color: #fcfcfc;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform var(--hover-transition);
 }
 
 .contact-form {
@@ -441,13 +449,18 @@ body {
 }
 
 .contact-form-btn-close {
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  /* margin-bottom: 24px; */
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin-left: auto;
   width: 24px;
   height: 24px;
-  transition: background-color var(--hover-transition);
+  background-color: #e7e9fc;
+  transition: background-color var(--hover-transition),
+    border var(--hover-transition);
 }
 
 .contact-form-btn-close svg {
@@ -457,6 +470,7 @@ body {
 
 .contact-form-btn-close:hover,
 .contact-form-btn-close:focus {
+  border: none;
   background-color: #404bbf;
 }
 
@@ -483,45 +497,44 @@ body {
   line-height: 1.17;
   font-size: 12px;
   letter-spacing: 0.04em;
-  transition: border-color var(--hover-transition),
-    fill var(--hover-transition);
+  color: #8e8f99;
+  transition: border-color var(--hover-transition), fill var(--hover-transition);
 }
 
 .contact-form-input-group {
   position: relative;
   display: flex;
   gap: 4px;
-  border: var(--input-border);
-  border-radius: 4px;
-  padding: 7px 8px 7px 38px;
   transition: border-color var(--hover-transition);
 }
 
-.contact-form-input-group:focus-within {
-  border-color: var(--color-iris);
-}
-
-.contact-form-input-group:focus-within .contact-form-input-icon {
-  fill: var(--color-iris);
-}
-
 .contact-form-input {
-  border: none;
+  outline: transparent;
+  border: var(--input-border);
+  border-radius: 4px;
   width: 100%;
-  padding: 0px;
+  height: 40px;
+  padding-left: 38px;
   background-color: inherit;
   line-height: inherit;
   font-size: inherit;
   letter-spacing: inherit;
+  transition: border-color var(--hover-transition);
 }
 
 .contact-form-input:focus {
-  outline: none;
+  border-color: var(--color-iris);
+}
+
+.contact-form-input:focus + .contact-form-input-icon {
+  fill: var(--color-iris);
 }
 
 .contact-form-input-icon {
   position: absolute;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
   fill: var(--color-navy-blue);
   transition: fill var(--hover-transition);
 }
@@ -531,13 +544,16 @@ body {
 }
 
 .contact-form-input-comment {
+  outline: transparent;
   border: var(--input-border);
   border-radius: 4px;
-  padding: 8px 16px 12px 16px;
+  height: 120px;
+  padding: 8px 16px;
   resize: none;
   line-height: 1.17;
   font-size: 12px;
   letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   transition: border-color var(--hover-transition);
 }
 
@@ -548,18 +564,17 @@ body {
 .contact-form-accept-group {
   margin-bottom: 24px;
 }
-
+/* 
 .contact-form-checkbox {
   display: none;
-}
+} */
 
 .contact-form-checkbox:checked + label .contact-form-custom-checkbox {
   background-color: #404bbf;
+  border: none;
 }
 
-.contact-form-checkbox:checked
-  + label
-  .contact-form-checkmark {
+.contact-form-checkbox:checked + label .contact-form-checkmark {
   fill: var(--color-cloud);
 }
 
@@ -571,17 +586,19 @@ body {
   height: 16px;
   background-color: inherit;
   cursor: pointer;
-  transition: backgroutd-color var(--hover-transition);
+  transition: backgroutd-color var(--hover-transition),
+    border var(--hover-transition);
 }
 
 .contact-form-checkmark {
-  fill: #fcfcfc;
+  fill: transparent;
   transition: fill var(--hover-transition);
 }
 
 .contact-form-accept-label {
   display: flex;
   align-items: center;
+  color: #8e8f99;
   cursor: pointer;
 }
 
@@ -594,8 +611,11 @@ body {
 .contact-form-submit {
   margin-inline: auto;
   border-radius: 4px;
+  min-width: 169px;
   padding: 16px 66.5px;
   line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.04em;
   color: #fff;
   background-color: var(--color-iris);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -692,17 +712,18 @@ body {
 
 .subscribe-form {
   display: flex;
+  gap: 24px;
 }
 
 .subscribe-input {
   display: block;
-  margin-right: 24px;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
-  padding: 7px 15px;
+  padding: 7px 16px;
   line-height: 2;
   font-size: 12px;
+  letter-spacing: 0.04em;
   color: currentColor;
   background-color: inherit;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
@@ -718,7 +739,10 @@ body {
 
 .subscribe-submit {
   border-radius: 4px;
+  min-width: 165px;
   padding: 8px 24px;
+  line-height: 1.5;
+  font-weight: 500;
   letter-spacing: 0.04em;
   background-color: var(--color-iris);
   transition: background-color var(--hover-transition);
@@ -726,7 +750,7 @@ body {
 
 .subscribe-submit:hover,
 .subscribe-submit:focus {
-  background-color: #404BBF;
+  background-color: #404bbf;
 }
 
 .subscribe-icon-send {

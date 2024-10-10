@@ -481,13 +481,13 @@
         </div>
 
         <div class="subscribe">
-          <p class="subscribe-title" for="subscribe-input">Subscribe</p>
+          <p class="subscribe-title">Subscribe</p>
 
           <form class="subscribe-form">
             <label class="subscribe-label">
               <input
                 type="email"
-                name="subscribe_email"
+                name="subscribe-email"
                 id="subscribe-input"
                 class="subscribe-input"
                 placeholder="E-mail"
@@ -496,7 +496,7 @@
 
             <button type="submit" class="subscribe-submit flex-center">
               Subscribe
-              <svg class="subscribe-icon-send" width="24" height="20">
+              <svg class="subscribe-icon-send" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -519,7 +519,7 @@
 
         <form class="contact-form">
           <div class="contact-form-group">
-            <label class="contact-form-label" for="form_contact_name"
+            <label class="contact-form-label" for="user-name"
               >Name</label
             >
 
@@ -527,8 +527,8 @@
               <input
                 class="contact-form-input"
                 type="text"
-                name="name"
-                id="form_contact_name"
+                name="user-name"
+                id="user-name"
               />
 
               <svg class="contact-form-input-icon" width="18" height="24">
@@ -538,7 +538,7 @@
           </div>
 
           <div class="contact-form-group">
-            <label class="contact-form-label" for="form_contact_phone"
+            <label class="contact-form-label" for="user-phone"
               >Phone</label
             >
 
@@ -546,8 +546,8 @@
               <input
                 class="contact-form-input"
                 type="tel"
-                name="phone"
-                id="form_contact_phone"
+                name="user-phone"
+                id="user-phone"
               />
 
               <svg class="contact-form-input-icon" width="18" height="24">
@@ -557,7 +557,7 @@
           </div>
 
           <div class="contact-form-group">
-            <label class="contact-form-label" for="form_contact_email"
+            <label class="contact-form-label" for="user-email"
               >Email</label
             >
 
@@ -565,8 +565,8 @@
               <input
                 class="contact-form-input"
                 type="email"
-                name="email"
-                id="form_contact_email"
+                name="user-email"
+                id="user-email"
               />
 
               <svg class="contact-form-input-icon" width="18" height="24">
@@ -576,30 +576,31 @@
           </div>
 
           <div class="contact-form-comment-group">
-            <label class="contact-form-label" for="form_contact_comment">
+            <label class="contact-form-label" for="user-comment">
               Comment
             </label>
 
             <textarea
               class="contact-form-input contact-form-input-comment"
-              name="comment"
+              name="user-comment"
               rows="7"
               placeholder="Text input"
-              id="form_contact_comment"
+              id="user-comment"
             ></textarea>
           </div>
 
           <div class="contact-form-accept-group">
             <input
-              class="contact-form-checkbox"
+              class="contact-form-checkbox visually-hidden"
               type="checkbox"
-              name="accept"
-              id="form_contact_accept"
+              name="user-privacy"
+              id="user-privacy"
+              checked
             />
 
             <label
               class="contact-form-label contact-form-accept-label"
-              for="form_contact_accept"
+              for="user-privacy"
             >
               <span class="contact-form-custom-checkbox flex-center">
                 <svg class="contact-form-checkmark" width="10" height="8">
