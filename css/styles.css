@@ -457,7 +457,6 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
-  /* margin-bottom: 24px; */
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin-left: auto;
@@ -569,10 +568,6 @@ body {
 .contact-form-accept-group {
   margin-bottom: 24px;
 }
-/* 
-.contact-form-checkbox {
-  display: none;
-} */
 
 .contact-form-checkbox:checked + label .contact-form-custom-checkbox {
   background-color: var(--color-ocean);
