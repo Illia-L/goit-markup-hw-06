@@ -706,6 +706,10 @@ body {
   color: currentColor;
 }
 
+.subscribe-input:focus {
+  outline: none;
+}
+
 .subscribe-submit {
   border-radius: 4px;
   padding: 8px 24px;
