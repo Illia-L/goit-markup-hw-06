@@ -62,9 +62,14 @@ textarea {
 /* #endregion */
 
 html {
-  --color-cloud: #f4f4fd;
   --color-iris: #4d5ae5;
+  --color-ocean: #404bbf;
   --color-navy-blue: #2e2f42;
+  --color-green: #31d0aa;
+  --color-slate: #434455;
+  --color-light-slate: #8e8f99;
+  --color-cornflower: #e7e9fc;
+  --color-cloud: #f4f4fd;
   --card-shadow: 0px 1px 1px 0px rgb(46, 47, 66, 0.08),
     0px 2px 1px 0px rgb(46, 47, 66, 0.08);
   --hover-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -75,7 +80,7 @@ body {
   /* max-width: 1440px; */
   line-height: 1.5;
   font-family: 'Roboto', sans-serif;
-  color: #434455;
+  color: var(--color-slate);
   background-color: #ffffff;
   letter-spacing: 0.02em;
 }
@@ -88,7 +93,7 @@ body {
 
 /* #region HEADER */
 .header {
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--color-cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -101,7 +106,7 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  color: #2e2f42;
+  color: var(--nave-blue);
 }
 
 .nav-items {
@@ -116,7 +121,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #4d5ae5;
+  color: var(--color-iris);
 }
 
 .header .logo {
@@ -124,7 +129,7 @@ body {
 }
 
 .logo-studio {
-  color: #2e2f42;
+  color: var(--nave-blue);
 }
 
 .nav-link {
@@ -135,7 +140,7 @@ body {
 
 .nav-link.active {
   position: relative;
-  color: #404bbf;
+  color: var(--color-ocean);
 }
 
 .nav-link.active::after {
@@ -146,12 +151,12 @@ body {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #404bbf;
+  color: var(--color-ocean);
 }
 
 .address {
@@ -171,7 +176,7 @@ body {
 
 .address-link:hover,
 .address-link:focus {
-  color: #404bbf;
+  color: var(--color-ocean);
 }
 /* #endregion */
 
@@ -252,14 +257,14 @@ body {
   letter-spacing: 0.04em;
   font-weight: 500;
   color: #ffffff;
-  background-color: #4d5ae5;
+  background-color: var(--color-iris);
   transition: background-color var(--hover-transition);
 }
 
 .hero-btn:hover,
 .hero-btn:focus,
 .hero-btn:active {
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 /* #endregion */
 
@@ -278,10 +283,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--color-light-slate);
   border-radius: 4px;
   height: 112px;
-  background-color: #f4f4fd;
+  background-color: var(--color-cloud);
 }
 
 .advantages-icon {
@@ -291,7 +296,7 @@ body {
 
 /* #region TEAM */
 .team {
-  background-color: #f4f4fd;
+  background-color: var(--color-cloud);
 }
 
 .persons {
@@ -347,7 +352,7 @@ body {
 
 .person-icon-link:hover,
 .person-icon-link:focus {
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 
 .person-icon {
@@ -379,7 +384,7 @@ body {
 }
 
 .portfolio-item-data {
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--color-cornflower);
   border-top: none;
   padding: 32px 16px;
 }
@@ -458,20 +463,20 @@ body {
   margin-left: auto;
   width: 24px;
   height: 24px;
-  background-color: #e7e9fc;
+  background-color: var(--color-cornflower);
   transition: background-color var(--hover-transition),
     border var(--hover-transition);
 }
 
 .contact-form-btn-close svg {
-  fill: #2e2f42;
+  fill: var(--nave-blue);
   transition: fill var(--hover-transition);
 }
 
 .contact-form-btn-close:hover,
 .contact-form-btn-close:focus {
   border: none;
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 
 .contact-form-btn-close:hover svg,
@@ -497,7 +502,7 @@ body {
   line-height: 1.17;
   font-size: 12px;
   letter-spacing: 0.04em;
-  color: #8e8f99;
+  color: var(--color-light-slate);
   transition: border-color var(--hover-transition), fill var(--hover-transition);
 }
 
@@ -570,35 +575,33 @@ body {
 } */
 
 .contact-form-checkbox:checked + label .contact-form-custom-checkbox {
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
   border: none;
-}
-
-.contact-form-checkbox:checked + label .contact-form-checkmark {
   fill: var(--color-cloud);
 }
 
 .contact-form-custom-checkbox {
+  display: inline-flex;
   margin-right: 8px;
   border: var(--input-border);
   border-radius: 2px;
   width: 16px;
   height: 16px;
   background-color: inherit;
+  fill: transparent;
   cursor: pointer;
-  transition: backgroutd-color var(--hover-transition),
+  transition: background-color var(--hover-transition),
     border var(--hover-transition);
 }
 
 .contact-form-checkmark {
-  fill: transparent;
   transition: fill var(--hover-transition);
 }
 
 .contact-form-accept-label {
   display: flex;
   align-items: center;
-  color: #8e8f99;
+  color: var(--color-light-slate);
   cursor: pointer;
 }
 
@@ -624,14 +627,14 @@ body {
 
 .contact-form-submit:hover,
 .contact-form-submit:focus {
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 /* #endregion */
 
 /* #region ROOTER */
 .footer {
   padding: 100px 0;
-  background-color: #2e2f42;
+  background-color: var(--nave-blue);
 }
 
 .footer .container {
@@ -649,12 +652,12 @@ body {
 }
 
 .footer .logo-studio {
-  color: #f4f4fd;
+  color: var(--color-cloud);
 }
 
 .footer-text {
   width: 264px;
-  color: #f4f4fd;
+  color: var(--color-cloud);
 }
 
 .footer-social-media {
@@ -750,7 +753,7 @@ body {
 
 .subscribe-submit:hover,
 .subscribe-submit:focus {
-  background-color: #404bbf;
+  background-color: var(--color-ocean);
 }
 
 .subscribe-icon-send {
