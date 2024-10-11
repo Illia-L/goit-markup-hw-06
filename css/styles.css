@@ -420,10 +420,12 @@ body {
   /* display: flex;
   justify-content: center;
   align-items: center; */
+  z-index: 999;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity var(--hover-transition),
     visibility var(--hover-transition);
@@ -431,6 +433,7 @@ body {
 
 .modal-overlay.is-opened {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
