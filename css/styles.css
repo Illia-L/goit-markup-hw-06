@@ -431,7 +431,7 @@ body {
     visibility var(--hover-transition);
 }
 
-.modal-overlay.is-opened {
+.modal-overlay.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
