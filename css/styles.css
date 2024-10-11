@@ -580,8 +580,6 @@ body {
 
 .contact-form-custom-checkbox {
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 8px;
   border: var(--input-border);
   border-radius: 2px;
