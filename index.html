@@ -14,40 +14,85 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-    />
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <a class="logo" href="./index.html"
-            >Web<span class="logo-studio">Studio</span></a
-          >
-          <ul class="nav-items">
-            <li><a class="nav-link active" href="./index.html">Studio</a></li>
-            <li><a class="nav-link" href="">Portfolio</a></li>
-            <li><a class="nav-link" href="">Contacts</a></li>
-          </ul>
-        </nav>
+        <a class="logo" href="./index.html"
+          >Web<span class="logo-studio">Studio</span></a
+        >
 
-        <address class="address">
-          <ul class="address-items">
-            <li>
-              <a class="address-link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a class="address-link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        <button class="menu-btn-open">
+          <svg class="nav-burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+
+        <menu class="menu">
+          <button class="menu-btn-close flex-center">
+            <svg class="menu-icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="nav">
+            <ul class="nav-items">
+              <li><a class="nav-link active" href="./index.html">Studio</a></li>
+              <li><a class="nav-link" href="">Portfolio</a></li>
+              <li><a class="nav-link" href="">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <address class="address">
+            <ul class="address-items">
+              <li class="address-item">
+                <a class="address-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="address-item">
+                <a class="address-link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+            </ul>
+          </address>
+
+          <div class="menu-social-media">
+            <ul class="menu-icons">
+              <li class="menu-icon-item">
+                <a class="menu-icon-link" href="" target="_blank">
+                  <svg class="menu-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-icon-item">
+                <a class="menu-icon-link" href="" target="_blank">
+                  <svg class="menu-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-icon-item">
+                <a class="menu-icon-link" href="" target="_blank">
+                  <svg class="menu-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="menu-icon-item">
+                <a class="menu-icon-link" href="" target="_blank">
+                  <svg class="menu-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </menu>
       </div>
     </header>
 
@@ -69,8 +114,8 @@
                   <use href="./images/icons.svg#icon-antenna"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Strategy</h3>
-              <p class="section-text">
+              <h3 class="section-subtitle advantage-title">Strategy</h3>
+              <p class="advantage-desc">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -82,8 +127,8 @@
                   <use href="./images/icons.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Punctuality</h3>
-              <p class="section-text">
+              <h3 class="section-subtitle advantage-title">Punctuality</h3>
+              <p class="advantage-desc">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -94,8 +139,8 @@
                   <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Diligence</h3>
-              <p class="section-text">
+              <h3 class="section-subtitle advantage-title">Diligence</h3>
+              <p class="advantage-desc">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -106,8 +151,8 @@
                   <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="section-subtitle">Technologies</h3>
-              <p class="section-text">
+              <h3 class="section-subtitle advantage-title">Technologies</h3>
+              <p class="advantage-desc">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -117,7 +162,7 @@
       </section>
 
       <section class="section team">
-        <div class="container">
+        <div class="container team-container">
           <h2 class="section-title team-title">Our Team</h2>
           <ul class="persons">
             <li class="person">
@@ -128,7 +173,7 @@
                 width="264"
               />
               <div class="person-data">
-                <h3 class="section-subtitle person-name">Mark Guerrero</h3>
+                <h3 class="section-subtitle text-center">Mark Guerrero</h3>
 
                 <p class="section-text person-job">Product Designer</p>
 
@@ -173,7 +218,7 @@
               />
 
               <div class="person-data">
-                <h3 class="section-subtitle person-name">Tom Ford</h3>
+                <h3 class="section-subtitle text-center">Tom Ford</h3>
 
                 <p class="section-text person-job">Frontend Developer</p>
 
@@ -218,7 +263,7 @@
               />
 
               <div class="person-data">
-                <h3 class="section-subtitle person-name">Camila Garcia</h3>
+                <h3 class="section-subtitle text-center">Camila Garcia</h3>
 
                 <p class="section-text person-job">Marketing</p>
 
@@ -263,7 +308,7 @@
               />
 
               <div class="person-data">
-                <h3 class="section-subtitle person-name">Daniel Wilson</h3>
+                <h3 class="section-subtitle text-center">Daniel Wilson</h3>
 
                 <p class="section-text person-job">UI Designer</p>
 
@@ -313,7 +358,7 @@
                   class="portfolio-img"
                   src="./images/banking-app.jpg"
                   alt="Banking App"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -334,7 +379,7 @@
                   class="portfolio-img"
                   src="./images/cashless-payment.jpg"
                   alt="Cashless Payment"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -354,7 +399,7 @@
                   class="portfolio-img"
                   src="./images/meditation-app.jpg"
                   alt="Meditation App"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -374,7 +419,7 @@
                   class="portfolio-img"
                   src="./images/taxi-service.jpg"
                   alt="Taxi Service"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -394,7 +439,7 @@
                   class="portfolio-img"
                   src="./images/screen-illustrations.jpg"
                   alt="Screen Illustrations"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -414,7 +459,7 @@
                   class="portfolio-img"
                   src="./images/online-courses.jpg"
                   alt="Online Courses"
-                  width="360"
+                  height="280"
                 />
 
                 <p class="portfolio-img-overlay">
@@ -505,7 +550,7 @@
       </div>
     </footer>
 
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button class="contact-form-btn-close flex-center" type="button">
           <svg width="8" height="8">
@@ -519,9 +564,7 @@
 
         <form class="contact-form">
           <div class="contact-form-group">
-            <label class="contact-form-label" for="user-name"
-              >Name</label
-            >
+            <label class="contact-form-label" for="user-name">Name</label>
 
             <div class="contact-form-input-group">
               <input
@@ -538,9 +581,7 @@
           </div>
 
           <div class="contact-form-group">
-            <label class="contact-form-label" for="user-phone"
-              >Phone</label
-            >
+            <label class="contact-form-label" for="user-phone">Phone</label>
 
             <div class="contact-form-input-group">
               <input
@@ -557,9 +598,7 @@
           </div>
 
           <div class="contact-form-group">
-            <label class="contact-form-label" for="user-email"
-              >Email</label
-            >
+            <label class="contact-form-label" for="user-email">Email</label>
 
             <div class="contact-form-input-group">
               <input
@@ -598,17 +637,16 @@
               value="true"
             />
 
-            <label
-              class="contact-form-accept-label"
-              for="user-privacy"
-            >
+            <label class="contact-form-accept-label" for="user-privacy">
               <span class="contact-form-custom-checkbox flex-center">
-                <svg class="contact-form-checkmark" width="10" height="8">
+                <svg class="contact-form-checkmark" width="16" height="16">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the
-              <a href="" class="contact-form-terms-link">Privacy Policy</a>
+              <span>
+                I accept the terms and conditions of the
+                <a href="" class="contact-form-terms-link">Privacy Policy</a>
+              </span>
             </label>
           </div>
           <button class="contact-form-submit" type="submit">Send</button>
