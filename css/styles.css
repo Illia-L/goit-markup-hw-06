@@ -142,6 +142,7 @@ body {
   top: 0;
   left: 100%;
   width: 100%;
+  height: 100vh;
   padding: 24px 24px 40px 16px;
   background-color: #fff;
   transition: left var(--hover-transition);
@@ -788,6 +789,15 @@ body {
 /* #endregion */
 
 /* #region MEDIA QUERIES */
+@media (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-background@2x.jpg');
+  }
+}
 
 @media (min-width: 768px) {
   .container {
@@ -808,6 +818,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    height: auto;
     padding: 0;
   }
 
