@@ -1070,7 +1070,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero-background-desc.jpg');
+    url('../images/hero-background-desk.jpg');
   }
 
   .page-title {
@@ -1158,7 +1158,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero-background-desc@2x.jpg');
+    url('../images/hero-background-desk@2x.jpg');
   }
 }
 
