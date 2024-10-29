@@ -132,15 +132,12 @@ body {
   padding: 16px;
 }
 
-.menu-btn-open {
-  width: 24px;
-  height: 24px;
-}
-
 .menu {
   position: fixed;
   top: 0;
   left: 100%;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   padding: 24px 24px 40px 16px;
@@ -150,6 +147,11 @@ body {
 
 .menu.is-open {
   left: 0;
+}
+
+.menu-btn-open {
+  width: 24px;
+  height: 24px;
 }
 
 .menu-btn-close {
@@ -165,7 +167,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
+  /* margin-bottom: 168px; */
   color: var(--color-navy-blue);
 }
 
@@ -196,6 +198,10 @@ body {
 
 .nav-burger-icon {
   margin-left: auto;
+}
+
+.menu-spacer {
+  flex-grow: 1;
 }
 
 .address {
@@ -257,7 +263,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero-background.jpg');
+    url('../images/hero-background-mob.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -331,7 +337,8 @@ body {
 }
 
 .team-container {
-  padding: 0 12px;
+  /* padding: 0 12px; */
+  width: 264px;
 }
 
 .persons {
@@ -389,13 +396,6 @@ body {
 /* #endregion */
 
 /* #region PORTFOLIO */
-
-.portfolio-items {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
 
 .portfolio-items {
   display: flex;
@@ -665,11 +665,11 @@ body {
 /* #region FOOTER */
 
 .footer {
-  padding: 96px 16px;
+  padding: 96px 0;
   background-color: var(--color-navy-blue);
 }
 
-.footer .container {
+.footer-container {
   display: flex;
   flex-direction: column;
   gap: 72px;
@@ -795,7 +795,7 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url('../images/hero-background@2x.jpg');
+      url('../images/hero-background-mob@2x.jpg');
   }
 }
 
@@ -814,7 +814,7 @@ body {
 
   .menu {
     position: static;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 0;
@@ -869,6 +869,10 @@ body {
     color: var(--color-ocean);
   }
 
+  .menu-spacer {
+    display: none;
+  }
+
   .address {
     display: block;
     margin-bottom: 0px;
@@ -897,6 +901,11 @@ body {
   .hero {
     max-width: 1440px;
     padding: 112px 0;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-background-tab.jpg');
   }
 
   .page-title {
@@ -928,7 +937,7 @@ body {
   }
 
   .team-container {
-    padding-inline: 92px;
+    width: 552px;
   }
 
   .persons {
@@ -962,17 +971,14 @@ body {
     height: 300px;
   }
 
-  .footer {
-    padding: 0;
-  }
-
-  .footer .container {
+  .footer-container {
     flex-direction: row;
     gap: 0;
     flex-wrap: wrap;
     row-gap: 72px;
     align-items: baseline;
-    padding: 96px 108px;
+    width: 552px;
+    /* padding: 96px 108px; */
   }
 
   .footer-webstudio {
@@ -993,7 +999,7 @@ body {
 
   .footer-social-media {
     width: 208px;
-    margin-right: 0;
+    margin: 0;
     text-align: left;
   }
 
@@ -1025,6 +1031,16 @@ body {
   }
 }
 
+@media (min-resolution: 192dpi) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-background-tab@2x.jpg');
+  }
+}
+
 @media (min-width: 1158px) {
   .container,
   .header .container {
@@ -1050,6 +1066,11 @@ body {
 
   .hero {
     padding: 188px 0;
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-background-desc.jpg');
   }
 
   .page-title {
@@ -1104,8 +1125,8 @@ body {
     flex-basis: calc((100% - 2 * 24px) / 3);
   }
 
-  .footer .container {
-    padding: 100px 15px;
+  .footer {
+    padding: 100px 0;
   }
 
   .footer-webstudio {
@@ -1128,6 +1149,16 @@ body {
   .modal {
     width: 408px;
     padding: 72px 24px 24px 24px;
+  }
+}
+
+@media (min-resolution: 192dpi) and (min-width: 1152px) {
+  .hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/hero-background-desc@2x.jpg');
   }
 }
 

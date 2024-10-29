@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WebStudio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -44,6 +44,8 @@
               <li><a class="nav-link" href="">Contacts</a></li>
             </ul>
           </nav>
+
+          <div class="menu-spacer"></div>
 
           <address class="address">
             <ul class="address-items">
@@ -168,7 +170,10 @@
             <li class="person">
               <img
                 class="person-photo"
-                srcset="./images/mark-guerrero.jpg 1x, ./images/mark-guerrero@2x.jpg 2x"
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero@2x.jpg 2x
+                "
                 src="./images/mark-guerrero.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -259,7 +264,10 @@
             <li class="person">
               <img
                 class="person-photo"
-                srcset="./images/camila-garcia.jpg 1x, ./images/camila-garcia@2x.jpg 2x"
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia@2x.jpg 2x
+                "
                 src="./images/camila-garcia.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -305,7 +313,10 @@
             <li class="person">
               <img
                 class="person-photo"
-                srcset="./images/daniel-wilson.jpg 1x, ./images/daniel-wilson@2x.jpg 2x"
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson@2x.jpg 2x
+                "
                 src="./images/daniel-wilson.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -358,13 +369,30 @@
           <ul class="portfolio-items">
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/banking-app.jpg 1x, ./images/banking-app@2x.jpg 2x"
-                  src="./images/banking-app.jpg"
-                  alt="Banking App"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/banking-app-desc.jpg    1x,
+                      ./images/banking-app-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/banking-app-tab.jpg    1x,
+                      ./images/banking-app-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/banking-app-mob.jpg    1x,
+                      ./images/banking-app-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -380,13 +408,30 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/cashless-payment.jpg 1x, ./images/cashless-payment@2x.jpg 2x"
-                  src="./images/cashless-payment.jpg"
-                  alt="Cashless Payment"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/cashless-payment-desc.jpg    1x,
+                      ./images/cashless-payment-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/cashless-payment-tab.jpg    1x,
+                      ./images/cashless-payment-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/cashless-payment-mob.jpg    1x,
+                      ./images/cashless-payment-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -401,13 +446,30 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/meditation-app.jpg 1x, ./images/meditation-app@2x.jpg 2x"
-                  src="./images/meditation-app.jpg"
-                  alt="Meditation App"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/meditation-app-desc.jpg    1x,
+                      ./images/meditation-app-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/meditation-app-tab.jpg    1x,
+                      ./images/meditation-app-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/meditation-app-mob.jpg    1x,
+                      ./images/meditation-app-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -422,13 +484,30 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/taxi-service.jpg 1x, ./images/taxi-service@2x.jpg 2x"
-                  src="./images/taxi-service.jpg"
-                  alt="Taxi Service"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/taxi-service-desc.jpg    1x,
+                      ./images/taxi-service-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/taxi-service-tab.jpg    1x,
+                      ./images/taxi-service-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/taxi-service-mob.jpg    1x,
+                      ./images/taxi-service-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -443,13 +522,30 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/screen-illustrations.jpg 1x, ./images/screen-illustrations@2x.jpg 2x"
-                  src="./images/screen-illustrations.jpg"
-                  alt="Screen Illustrations"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/screen-illustrations-desc.jpg    1x,
+                      ./images/screen-illustrations-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/screen-illustrations-tab.jpg    1x,
+                      ./images/screen-illustrations-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/screen-illustrations-mob.jpg    1x,
+                      ./images/screen-illustrations-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -464,13 +560,30 @@
             </li>
             <li class="portfolio-item">
               <div class="portfolio-img-box">
-                <img
-                  class="portfolio-img"
-                  srcset="./images/online-courses.jpg 1x, ./images/online-courses@2x.jpg 2x"
-                  src="./images/online-courses.jpg"
-                  alt="Online Courses"
-                  height="280"
-                />
+                <picture class="portfolio-img">
+                  <source
+                    srcset="
+                      ./images/online-courses-desc.jpg    1x,
+                      ./images/online-courses-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/online-courses-tab.jpg    1x,
+                      ./images/online-courses-tab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/online-courses-mob.jpg    1x,
+                      ./images/online-courses-mob@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img src="./images/portfolio-img-mob.jpg" alt="Banking App" />
+                </picture>
 
                 <p class="portfolio-img-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task
@@ -489,7 +602,7 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <div class="footer-webstudio">
           <a class="logo footer-logo" href="./index.html"
             >Web<span class="logo-studio">Studio</span></a
